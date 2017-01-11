@@ -1,6 +1,7 @@
 package com.ddmeng.helloanimations.property;
 
 import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
@@ -16,7 +17,8 @@ import com.ddmeng.helloanimations.ShapeHolder;
 
 import java.util.ArrayList;
 
-public class MyAnimationView extends View {
+public class MyAnimationView extends View implements ValueAnimator.AnimatorUpdateListener {
+    public static final int ANIMATION_DURATION = 500;
     private float density;
     private final ArrayList<ShapeHolder> balls = new ArrayList<>();
     private AnimatorSet animatorSet;
@@ -34,10 +36,10 @@ public class MyAnimationView extends View {
     private void init() {
         density = getContext().getResources().getDisplayMetrics().density;
         addBall(50f, 25f);
-        addBall(150f, 25f);
-        addBall(250f, 25f);
+        addBall(200f, 25f);
         addBall(350f, 25f);
-        addBall(450f, 25f);
+        addBall(500f, 25f);
+        addBall(650f, 25f);
     }
 
     public void play() {
@@ -51,7 +53,7 @@ public class MyAnimationView extends View {
         // Animation 1: Use ValueAnimator
         final ShapeHolder ball1 = balls.get(0);
         ValueAnimator animator1 = ValueAnimator.ofFloat(0f, getHeight() - ball1.getHeight());
-        animator1.setDuration(500);
+        animator1.setDuration(ANIMATION_DURATION);
         animator1.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
@@ -60,8 +62,15 @@ public class MyAnimationView extends View {
             }
         });
 
+        // Animation 2: Use ObjectAnimator
+        ShapeHolder ball2 = balls.get(1);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(ball2, "y", 0f, getHeight() - ball2.getHeight());
+        animator2.setDuration(ANIMATION_DURATION);
+        animator2.addUpdateListener(this);
+
+
         animatorSet = new AnimatorSet();
-        animatorSet.play(animator1);
+        animatorSet.playSequentially(animator1, animator2);
     }
 
     @Override
@@ -100,4 +109,8 @@ public class MyAnimationView extends View {
     }
 
 
+    @Override
+    public void onAnimationUpdate(ValueAnimator animation) {
+        invalidate();
+    }
 }
