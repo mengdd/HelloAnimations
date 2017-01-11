@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HelloAnimations</string>
     <string name="basic_property_animation_demo">Basic Property Animation</string>
+    <string name="play_animation">Play Animation</string>
 </resources>
