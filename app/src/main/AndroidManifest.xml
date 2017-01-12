@@ -18,6 +18,9 @@
         <activity
             android:name=".property.BasicPropertyAnimationDemo"
             android:label="@string/basic_property_animation_demo" />
+        <activity
+            android:name=".property.ViewPropertyAnimationDemoActivity"
+            android:label="@string/view_property_animation_demo" />
     </application>
 
 </manifest>

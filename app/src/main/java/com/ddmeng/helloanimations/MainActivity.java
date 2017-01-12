@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.ddmeng.helloanimations.property.BasicPropertyAnimationDemo;
+import com.ddmeng.helloanimations.property.ViewPropertyAnimationDemoActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         samples = new Sample[]{
-                new Sample(R.string.basic_property_animation_demo, BasicPropertyAnimationDemo.class)
+                new Sample(R.string.basic_property_animation_demo, BasicPropertyAnimationDemo.class),
+                new Sample(R.string.view_property_animation_demo, ViewPropertyAnimationDemoActivity.class)
 
         };
         sampleListView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
