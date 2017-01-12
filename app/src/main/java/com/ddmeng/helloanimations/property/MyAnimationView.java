@@ -1,5 +1,6 @@
 package com.ddmeng.helloanimations.property;
 
+import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
@@ -12,7 +13,10 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 
+import com.ddmeng.helloanimations.R;
 import com.ddmeng.helloanimations.ShapeHolder;
 
 import java.util.ArrayList;
@@ -68,9 +72,41 @@ public class MyAnimationView extends View implements ValueAnimator.AnimatorUpdat
         animator2.setDuration(ANIMATION_DURATION);
         animator2.addUpdateListener(this);
 
+        // Animation 3: ValueAnimator from xml <animator>
+        ValueAnimator animator3 = (ValueAnimator) AnimatorInflater.loadAnimator(getContext(), R.animator.animator);
+        animator3.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            public void onAnimationUpdate(ValueAnimator animation) {
+                balls.get(2).setAlpha((Float) animation.getAnimatedValue());
+                invalidate();
+            }
+        });
+
+        // Animation 4: AnimatorSet from xml <set>
+        AnimatorSet animator4 = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.animator_set);
+        animator4.setTarget(balls.get(3));
+        // 这里要注意：因为AnimatorSet没有设置AnimatorUpdateListener的方法，
+        // 所以如果其他动画没有设置AnimatorUpdateListener来进行View的invalidate()刷新，
+        // 这个AnimatorSet seq是不刷新的
+
+
+        // Animation 5: AnimatorSet with Interpolator
+        ShapeHolder ball5 = balls.get(4);
+        ObjectAnimator animDown = ObjectAnimator.ofFloat(ball5, "y", 0f, getHeight() - ball5.getHeight()).setDuration(ANIMATION_DURATION);
+        animDown.setInterpolator(new AccelerateInterpolator());
+        animDown.addUpdateListener(this);
+
+        ObjectAnimator animUp = ObjectAnimator.ofFloat(ball5, "y", getHeight() - ball5.getHeight(), 0f).setDuration(ANIMATION_DURATION);
+        animUp.setInterpolator(new DecelerateInterpolator());
+        animUp.addUpdateListener(this);
+
+        AnimatorSet animator5 = new AnimatorSet();
+        animator5.playSequentially(animDown, animUp);
+
 
         animatorSet = new AnimatorSet();
-        animatorSet.playSequentially(animator1, animator2);
+        animatorSet.playSequentially(animator1, animator2, animator3);
+        animatorSet.playTogether(animator3, animator4);
+        animatorSet.playSequentially(animator4, animator5);
     }
 
     @Override

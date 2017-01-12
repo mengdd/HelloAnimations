@@ -22,7 +22,7 @@ public class BasicPropertyAnimationDemo extends AppCompatActivity {
     }
 
     @OnClick(R.id.play_button)
-    void onPlayButotnClick() {
+    void onPlayButtonClick() {
         myAnimationView.play();
     }
 }
