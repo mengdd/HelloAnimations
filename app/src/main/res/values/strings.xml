@@ -29,5 +29,9 @@
     <string name="simple_activity_transition_demo">Simple Activity Transition</string>
     <string name="next_activity">Next Activity</string>
     <string name="activity_two">Activity Two</string>
+    <string name="simple_fragment_transition_demo">Simple Fragment Transition</string>
+    <string name="fragment_no">This is Fragment No.%d</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
 
 </resources>

@@ -17,6 +17,7 @@ import com.ddmeng.helloanimations.property.KeyframeDemoActivity;
 import com.ddmeng.helloanimations.property.ViewPropertyAnimationDemoActivity;
 import com.ddmeng.helloanimations.property.ZoomActivity;
 import com.ddmeng.helloanimations.transition.activity.SimpleActivityTransitionDemoActivity;
+import com.ddmeng.helloanimations.transition.fragment.SimpleFragmentTransitionDemoActivity;
 import com.ddmeng.helloanimations.view.ViewAnimationDemoActivity;
 
 import butterknife.BindView;
@@ -44,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
                 new Sample(R.string.view_animation_demo, ViewAnimationDemoActivity.class),
                 new Sample(R.string.card_flip_demo, CardFlipActivity.class),
                 new Sample(R.string.zoom_demo, ZoomActivity.class),
-                new Sample(R.string.simple_activity_transition_demo, SimpleActivityTransitionDemoActivity.class)
+                new Sample(R.string.simple_activity_transition_demo, SimpleActivityTransitionDemoActivity.class),
+                new Sample(R.string.simple_fragment_transition_demo, SimpleFragmentTransitionDemoActivity.class)
 
         };
         sampleListView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,

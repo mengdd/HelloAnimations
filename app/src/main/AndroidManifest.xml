@@ -42,7 +42,10 @@
         <activity
             android:name=".transition.activity.SimpleActivityTransitionDemoActivity"
             android:label="@string/simple_activity_transition_demo" />
-        <activity android:name=".transition.activity.SimpleTransitionSecondActivity"></activity>
+        <activity android:name=".transition.activity.SimpleTransitionSecondActivity" />
+        <activity
+            android:name=".transition.fragment.SimpleFragmentTransitionDemoActivity"
+            android:label="@string/simple_fragment_transition_demo" />
     </application>
 
 </manifest>
