@@ -26,5 +26,8 @@
     <string name="action_photo">View photo</string>
     <string name="description_image_1">Image 1</string>
     <string name="zoom_demo">Zoom Demo</string>
+    <string name="simple_activity_transition_demo">Simple Activity Transition</string>
+    <string name="next_activity">Next Activity</string>
+    <string name="activity_two">Activity Two</string>
 
 </resources>

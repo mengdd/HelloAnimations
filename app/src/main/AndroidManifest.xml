@@ -39,6 +39,10 @@
         <activity
             android:name=".property.ZoomActivity"
             android:label="@string/zoom_demo" />
+        <activity
+            android:name=".transition.activity.SimpleActivityTransitionDemoActivity"
+            android:label="@string/simple_activity_transition_demo" />
+        <activity android:name=".transition.activity.SimpleTransitionSecondActivity"></activity>
     </application>
 
 </manifest>
