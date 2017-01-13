@@ -12,11 +12,11 @@ import android.widget.ListView;
 import com.ddmeng.helloanimations.layout.DefaultLayoutAnimationDemoActivity;
 import com.ddmeng.helloanimations.layout.LayoutAnimationsDemoActivity;
 import com.ddmeng.helloanimations.property.BasicPropertyAnimationDemo;
-import com.ddmeng.helloanimations.property.CardFlipActivity;
 import com.ddmeng.helloanimations.property.KeyframeDemoActivity;
 import com.ddmeng.helloanimations.property.ViewPropertyAnimationDemoActivity;
 import com.ddmeng.helloanimations.property.ZoomActivity;
 import com.ddmeng.helloanimations.transition.activity.SimpleActivityTransitionDemoActivity;
+import com.ddmeng.helloanimations.transition.fragment.CardFlipActivity;
 import com.ddmeng.helloanimations.transition.fragment.SimpleFragmentTransitionDemoActivity;
 import com.ddmeng.helloanimations.view.ViewAnimationDemoActivity;
 
@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
                 new Sample(R.string.default_layout_animation_demo, DefaultLayoutAnimationDemoActivity.class),
                 new Sample(R.string.layout_animations_demo, LayoutAnimationsDemoActivity.class),
                 new Sample(R.string.view_animation_demo, ViewAnimationDemoActivity.class),
-                new Sample(R.string.card_flip_demo, CardFlipActivity.class),
                 new Sample(R.string.zoom_demo, ZoomActivity.class),
                 new Sample(R.string.simple_activity_transition_demo, SimpleActivityTransitionDemoActivity.class),
-                new Sample(R.string.simple_fragment_transition_demo, SimpleFragmentTransitionDemoActivity.class)
+                new Sample(R.string.simple_fragment_transition_demo, SimpleFragmentTransitionDemoActivity.class),
+                new Sample(R.string.card_flip_demo, CardFlipActivity.class)
 
         };
         sampleListView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,

@@ -1,4 +1,4 @@
-package com.ddmeng.helloanimations.property;
+package com.ddmeng.helloanimations.transition.fragment;
 
 import android.app.Fragment;
 import android.app.FragmentManager;

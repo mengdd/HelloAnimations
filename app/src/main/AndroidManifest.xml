@@ -34,7 +34,7 @@
             android:name=".view.ViewAnimationDemoActivity"
             android:label="@string/view_animation_demo" />
         <activity
-            android:name=".property.CardFlipActivity"
+            android:name=".transition.fragment.CardFlipActivity"
             android:label="@string/card_flip_demo" />
         <activity
             android:name=".property.ZoomActivity"
