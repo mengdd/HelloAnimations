@@ -85,9 +85,9 @@ public class LayoutAnimationsDemoActivity extends AppCompatActivity {
 
         // 自定义的ChangingAppearing动画
         // 感觉就是从无到有地缩放了一遍
-        customChangingAppearingAnim = ObjectAnimator.ofPropertyValuesHolder(
-                this, pvhLeft, pvhTop, pvhRight, pvhBottom, pvhScaleX, pvhScaleY).setDuration(
-                transition.getDuration(LayoutTransition.CHANGE_APPEARING));
+        customChangingAppearingAnim = ObjectAnimator.ofPropertyValuesHolder(new Object(), pvhLeft, pvhTop, pvhRight,
+                pvhBottom, pvhScaleX, pvhScaleY)
+                .setDuration(transition.getDuration(LayoutTransition.CHANGE_APPEARING));
         customChangingAppearingAnim.addListener(new AnimatorListenerAdapter() {
             public void onAnimationEnd(Animator anim) {
                 View view = (View) ((ObjectAnimator) anim).getTarget();
@@ -103,7 +103,7 @@ public class LayoutAnimationsDemoActivity extends AppCompatActivity {
         Keyframe kf1 = Keyframe.ofFloat(.9999f, 360f);
         Keyframe kf2 = Keyframe.ofFloat(1f, 0f);
         PropertyValuesHolder pvhRotation = PropertyValuesHolder.ofKeyframe("rotation", kf0, kf1, kf2);
-        customChangingDisappearingAnim = ObjectAnimator.ofPropertyValuesHolder(this, pvhLeft, pvhTop, pvhRight,
+        customChangingDisappearingAnim = ObjectAnimator.ofPropertyValuesHolder(new Object(), pvhLeft, pvhTop, pvhRight,
                 pvhBottom, pvhRotation)
                 .setDuration(transition.getDuration(LayoutTransition.CHANGE_DISAPPEARING));
         customChangingDisappearingAnim
