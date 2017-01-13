@@ -6,4 +6,5 @@
     <string name="text_view_1">TextView 1</string>
     <string name="text_view_2">TextView 2</string>
     <string name="text_view_3">TextView 3</string>
+    <string name="keyframe_demo">Keyframe Demo</string>
 </resources>
