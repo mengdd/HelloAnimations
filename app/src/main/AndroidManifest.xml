@@ -33,6 +33,9 @@
         <activity
             android:name=".view.ViewAnimationDemoActivity"
             android:label="@string/view_animation_demo" />
+        <activity
+            android:name=".property.CardFlipActivity"
+            android:label="@string/card_flip_demo" />
     </application>
 
 </manifest>

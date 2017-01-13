@@ -19,4 +19,11 @@
     <string name="view_animation_demo">View Animation Demo</string>
     <string name="run">Run</string>
     <string name="target">Target</string>
+    <string name="card_flip_demo">Card Flip</string>
+    <string name="card_back_title">Angry Red Android</string>
+    <string name="card_back_description"><![CDATA[Lorem ipsum dolor sit]]></string>
+    <string name="action_info">Photo info</string>
+    <string name="action_photo">View photo</string>
+    <string name="description_image_1">Image 1</string>
+
 </resources>
