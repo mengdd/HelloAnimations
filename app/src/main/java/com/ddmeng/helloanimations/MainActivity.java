@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.ddmeng.helloanimations.layout.DefaultLayoutAnimationDemoActivity;
 import com.ddmeng.helloanimations.property.BasicPropertyAnimationDemo;
 import com.ddmeng.helloanimations.property.KeyframeDemoActivity;
 import com.ddmeng.helloanimations.property.ViewPropertyAnimationDemoActivity;
@@ -32,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         samples = new Sample[]{
                 new Sample(R.string.basic_property_animation_demo, BasicPropertyAnimationDemo.class),
                 new Sample(R.string.view_property_animation_demo, ViewPropertyAnimationDemoActivity.class),
-                new Sample(R.string.keyframe_demo, KeyframeDemoActivity.class)
+                new Sample(R.string.keyframe_demo, KeyframeDemoActivity.class),
+                new Sample(R.string.default_layout_animation_demo, DefaultLayoutAnimationDemoActivity.class)
 
         };
         sampleListView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,

@@ -21,7 +21,12 @@
         <activity
             android:name=".property.ViewPropertyAnimationDemoActivity"
             android:label="@string/view_property_animation_demo" />
-        <activity android:name=".property.KeyframeDemoActivity"></activity>
+        <activity
+            android:name=".property.KeyframeDemoActivity"
+            android:label="@string/keyframe_demo" />
+        <activity
+            android:name=".layout.DefaultLayoutAnimationDemoActivity"
+            android:label="@string/default_layout_animation_demo" />
     </application>
 
 </manifest>
