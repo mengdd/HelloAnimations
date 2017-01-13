@@ -36,6 +36,9 @@
         <activity
             android:name=".property.CardFlipActivity"
             android:label="@string/card_flip_demo" />
+        <activity
+            android:name=".property.ZoomActivity"
+            android:label="@string/zoom_demo" />
     </application>
 
 </manifest>

@@ -25,5 +25,6 @@
     <string name="action_info">Photo info</string>
     <string name="action_photo">View photo</string>
     <string name="description_image_1">Image 1</string>
+    <string name="zoom_demo">Zoom Demo</string>
 
 </resources>
