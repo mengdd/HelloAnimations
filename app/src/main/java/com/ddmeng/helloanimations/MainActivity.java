@@ -14,6 +14,7 @@ import com.ddmeng.helloanimations.layout.LayoutAnimationsDemoActivity;
 import com.ddmeng.helloanimations.property.BasicPropertyAnimationDemo;
 import com.ddmeng.helloanimations.property.KeyframeDemoActivity;
 import com.ddmeng.helloanimations.property.ViewPropertyAnimationDemoActivity;
+import com.ddmeng.helloanimations.view.ViewAnimationDemoActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
                 new Sample(R.string.view_property_animation_demo, ViewPropertyAnimationDemoActivity.class),
                 new Sample(R.string.keyframe_demo, KeyframeDemoActivity.class),
                 new Sample(R.string.default_layout_animation_demo, DefaultLayoutAnimationDemoActivity.class),
-                new Sample(R.string.layout_animations_demo, LayoutAnimationsDemoActivity.class)
+                new Sample(R.string.layout_animations_demo, LayoutAnimationsDemoActivity.class),
+                new Sample(R.string.view_animation_demo, ViewAnimationDemoActivity.class)
 
         };
         sampleListView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,

@@ -30,6 +30,9 @@
         <activity
             android:name=".layout.LayoutAnimationsDemoActivity"
             android:label="@string/layout_animations_demo" />
+        <activity
+            android:name=".view.ViewAnimationDemoActivity"
+            android:label="@string/view_animation_demo" />
     </application>
 
 </manifest>

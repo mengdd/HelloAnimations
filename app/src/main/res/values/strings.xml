@@ -16,4 +16,7 @@
     <string name="out">Out</string>
     <string name="changing_in">Changing-In</string>
     <string name="changing_out">Changing-Out</string>
+    <string name="view_animation_demo">View Animation Demo</string>
+    <string name="run">Run</string>
+    <string name="target">Target</string>
 </resources>
