@@ -27,6 +27,9 @@
         <activity
             android:name=".layout.DefaultLayoutAnimationDemoActivity"
             android:label="@string/default_layout_animation_demo" />
+        <activity
+            android:name=".layout.LayoutAnimationsDemoActivity"
+            android:label="@string/layout_animations_demo" />
     </application>
 
 </manifest>

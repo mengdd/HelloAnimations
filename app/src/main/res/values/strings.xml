@@ -9,4 +9,11 @@
     <string name="keyframe_demo">Keyframe Demo</string>
     <string name="default_layout_animation_demo">Default Layout Animation Demo</string>
     <string name="add_new_view">Add New View</string>
+    <string name="layout_animations_demo">Layout Animations Demo</string>
+    <string name="add_button">Add Button</string>
+    <string name="custom_animations">Custom Animations</string>
+    <string name="in">In</string>
+    <string name="out">Out</string>
+    <string name="changing_in">Changing-In</string>
+    <string name="changing_out">Changing-Out</string>
 </resources>
