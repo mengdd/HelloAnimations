@@ -35,5 +35,11 @@
     <string name="remove">Remove</string>
     <string name="activity_transition_demo">Activity Transition Demo</string>
     <string name="exit">Exit</string>
+    <string name="shared_element_activity_demo">Shared Element Activity</string>
+    <string name="shared_element_activity">Shared Element Activity</string>
+    <string name="shared_element_activity_2">Shared 2</string>
+    <string name="transition_name_activity_image">activity shared image element</string>
+    <string name="transition_name_activity_text">activity shared text element</string>
+    <string name="start_next_activity">Start Next Activity</string>
 
 </resources>

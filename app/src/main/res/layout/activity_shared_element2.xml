@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shared_element2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ddmeng.helloanimations.transition.activity.SharedElementActivity2">
+
+
+    <ImageView
+        android:id="@+id/shared_element2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@null"
+        android:src="@drawable/square"
+        android:transitionName="@string/transition_name_activity_image"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shared_element_activity"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:transitionName="@string/transition_name_activity_text"
+        tools:targetApi="lollipop" />
+</LinearLayout>

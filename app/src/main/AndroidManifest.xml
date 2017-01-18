@@ -49,7 +49,11 @@
         <activity
             android:name=".transition.activity.TransitionActivity"
             android:label="@string/activity_transition_demo" />
-        <activity android:name=".transition.activity.TransitionActivity2"></activity>
+        <activity android:name=".transition.activity.TransitionActivity2" />
+        <activity
+            android:name=".transition.activity.SharedElementActivity"
+            android:label="@string/shared_element_activity_demo" />
+        <activity android:name=".transition.activity.SharedElementActivity2"></activity>
     </application>
 
 </manifest>

@@ -15,6 +15,7 @@ import com.ddmeng.helloanimations.property.BasicPropertyAnimationDemo;
 import com.ddmeng.helloanimations.property.KeyframeDemoActivity;
 import com.ddmeng.helloanimations.property.ViewPropertyAnimationDemoActivity;
 import com.ddmeng.helloanimations.property.ZoomActivity;
+import com.ddmeng.helloanimations.transition.activity.SharedElementActivity;
 import com.ddmeng.helloanimations.transition.activity.SimpleActivityTransitionDemoActivity;
 import com.ddmeng.helloanimations.transition.activity.TransitionActivity;
 import com.ddmeng.helloanimations.transition.fragment.CardFlipActivity;
@@ -48,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 new Sample(R.string.simple_activity_transition_demo, SimpleActivityTransitionDemoActivity.class),
                 new Sample(R.string.simple_fragment_transition_demo, SimpleFragmentTransitionDemoActivity.class),
                 new Sample(R.string.card_flip_demo, CardFlipActivity.class),
-                new Sample(R.string.activity_transition_demo, TransitionActivity.class)
+                new Sample(R.string.activity_transition_demo, TransitionActivity.class),
+                new Sample(R.string.shared_element_activity_demo, SharedElementActivity.class)
 
         };
         sampleListView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
