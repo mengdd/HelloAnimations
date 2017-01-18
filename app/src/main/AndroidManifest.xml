@@ -46,6 +46,10 @@
         <activity
             android:name=".transition.fragment.SimpleFragmentTransitionDemoActivity"
             android:label="@string/simple_fragment_transition_demo" />
+        <activity
+            android:name=".transition.activity.TransitionActivity"
+            android:label="@string/activity_transition_demo" />
+        <activity android:name=".transition.activity.TransitionActivity2"></activity>
     </application>
 
 </manifest>
