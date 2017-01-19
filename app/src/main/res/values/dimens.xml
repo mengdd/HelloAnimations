@@ -4,4 +4,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="thumb_button_width">100dp</dimen>
     <dimen name="thumb_button_height">75dp</dimen>
+    <dimen name="image_padding">4dp</dimen>
+    <dimen name="image_size">120dp</dimen>
 </resources>
