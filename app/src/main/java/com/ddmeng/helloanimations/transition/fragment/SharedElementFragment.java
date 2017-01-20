@@ -51,7 +51,7 @@ public class SharedElementFragment extends Fragment implements ImageAdapter.Imag
     }
 
     private void initAnimation() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             sharedElementTransition = TransitionInflater.from(getActivity()).inflateTransition(R.transition.shared_element_transition_set);
         }
     }
