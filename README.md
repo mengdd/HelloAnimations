@@ -4,12 +4,14 @@ Sample project for Android Animations.
 ## Content
 ### Property Animation
 [Property Animation](https://developer.android.com/guide/topics/graphics/prop-animation.html)
+
 Property Animation相关的类:
-[ValueAnimator](https://developer.android.com/reference/android/animation/ValueAnimator.html)
-[ObjectAnimator](https://developer.android.com/reference/android/animation/ObjectAnimator.html)
-[AnimatorSet](https://developer.android.com/reference/android/animation/AnimatorSet.html)
+- [ValueAnimator](https://developer.android.com/reference/android/animation/ValueAnimator.html)
+- [ObjectAnimator](https://developer.android.com/reference/android/animation/ObjectAnimator.html)
+- [AnimatorSet](https://developer.android.com/reference/android/animation/AnimatorSet.html)
 
 都处在包`android.animation`中, 除了用到的Interpolater都在`android.view.animation`包中.
+
 Property Animation的xml文件在`res/animator`文件夹中.
 
 #### Layout Animation
@@ -27,6 +29,7 @@ ViewGroup默认的layout动画可以在xml中通过`android:animateLayoutChanges
 ### View Animation
 [View Animation](https://developer.android.com/guide/topics/graphics/view-animation.html)
 View Animation相关的类都在`android.view.animation`包中.
+
 View Animation相关的xml文件在`res/anim`文件夹中.
 
 
@@ -36,6 +39,7 @@ View Animation有一个缺点就是当View被移动到另一个位置以后, 其
 ### Transitions
 在Android 5.0 (API 21)之前, Activity的转场动画是靠`overridePendingTransition()`指定(指定anim), Fragment是`setCustomAnimations()`指定(v4指定anim, 非v4指定animator).
 它们只能把整个屏幕作为整体做转换.
+
 从Android 5.0开始, Lollipop APIs让我们可以独立地动画场景中的View元素, 并且可以在两个Activity/Fragment转换的过程中移动共享元素.
 
 #### Shared Element Transition
@@ -43,19 +47,19 @@ View Animation有一个缺点就是当View被移动到另一个位置以后, 其
 
 
 ## Reference Demos
-[AnimationApiDemos](https://github.com/mengdd/AnimationApiDemos) (Old demo in Eclipse time).
-[Material-Animations](https://github.com/lgvalle/Material-Animations)
+- [AnimationApiDemos](https://github.com/mengdd/AnimationApiDemos) (Old demo in Eclipse time).
+- [Material-Animations](https://github.com/lgvalle/Material-Animations)
 
 
 ## References
-[官方文档Training Adding Animations](https://developer.android.com/training/animation/index.html)
-[官方文档Training Defining Custom Animations](https://developer.android.com/training/material/animations.html)
-[官方文档Guides Animation and Graphics Overview](https://developer.android.com/guide/topics/graphics/overview.html)
-[CodePath Animations](https://guides.codepath.com/android/Animations)
+- [官方文档Training Adding Animations](https://developer.android.com/training/animation/index.html)
+- [官方文档Training Defining Custom Animations](https://developer.android.com/training/material/animations.html)
+- [官方文档Guides Animation and Graphics Overview](https://developer.android.com/guide/topics/graphics/overview.html)
+- [CodePath Animations](https://guides.codepath.com/android/Animations)
 
 Transitions:
-[官方文档Training Transitions](https://developer.android.com/training/transitions/overview.html)
-[Activity & Fragment Transitions](http://www.androiddesignpatterns.com/2014/12/activity-fragment-transitions-in-android-lollipop-part1.html)
+- [官方文档Training Transitions](https://developer.android.com/training/transitions/overview.html)
+- [Activity & Fragment Transitions](http://www.androiddesignpatterns.com/2014/12/activity-fragment-transitions-in-android-lollipop-part1.html)
 
 早年的博客系列文章:
 [Android Animation](http://www.cnblogs.com/mengdd/category/514665.html)
