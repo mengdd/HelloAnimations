@@ -46,5 +46,7 @@
     <string name="shared_element_fragment_demo">Shared Element Fragment Demo</string>
 
     <string name="transition_name_fragment_image">fragment shared image %1$d-%2$d</string>
+    <string name="transition_name_fragment_text">fragment shared text</string>
+    <string name="android_images">Android Images</string>
 
 </resources>

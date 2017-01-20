@@ -11,6 +11,7 @@ import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.ddmeng.helloanimations.R;
 
@@ -23,6 +24,8 @@ public class SharedElementFragment extends Fragment implements ImageAdapter.Imag
     private static final int[] IMAGE_IDS = new int[]{R.drawable.image1, R.drawable.image2,
             R.drawable.image2, R.drawable.image1};
 
+    @BindView(R.id.title)
+    TextView titleTextView;
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
     private Transition sharedElementTransition;
@@ -65,7 +68,9 @@ public class SharedElementFragment extends Fragment implements ImageAdapter.Imag
 
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
+                .addSharedElement(titleTextView, getString(R.string.transition_name_fragment_text))
                 .addSharedElement(sharedView, transitionName)
+                .setAllowOptimization(false) //without this, pop back will throw NullPointerException, maybe a bug in support.v4
                 .replace(R.id.fragment_container, detailFragment)
                 .addToBackStack(null)
                 .commit();

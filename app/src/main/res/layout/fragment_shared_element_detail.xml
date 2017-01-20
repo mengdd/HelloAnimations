@@ -1,13 +1,25 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.ddmeng.helloanimations.transition.fragment.SharedElementDetailFragment">
 
     <ImageView
         android:id="@+id/detail_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:contentDescription="@null" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/android_images"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:transitionName="@string/transition_name_fragment_text"
+        tools:targetApi="lollipop" />
+</LinearLayout>
