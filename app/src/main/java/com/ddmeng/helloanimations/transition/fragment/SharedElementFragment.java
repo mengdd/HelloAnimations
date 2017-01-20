@@ -1,10 +1,13 @@
 package com.ddmeng.helloanimations.transition.fragment;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +25,7 @@ public class SharedElementFragment extends Fragment implements ImageAdapter.Imag
 
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
+    private Transition sharedElementTransition;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +38,7 @@ public class SharedElementFragment extends Fragment implements ImageAdapter.Imag
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
         initRecyclerView();
+        initAnimation();
     }
 
     private void initRecyclerView() {
@@ -42,11 +47,25 @@ public class SharedElementFragment extends Fragment implements ImageAdapter.Imag
         recyclerView.setAdapter(adapter);
     }
 
+    private void initAnimation() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            sharedElementTransition = TransitionInflater.from(getActivity()).inflateTransition(R.transition.shared_element_transition_set);
+        }
+    }
+
     @Override
-    public void onImageItemClicked(int position, int resourceId) {
-        SharedElementDetailFragment detailFragment = SharedElementDetailFragment.newInstance(resourceId);
+    public void onImageItemClicked(int position, int resourceId, View sharedView) {
+        SharedElementDetailFragment detailFragment = SharedElementDetailFragment.newInstance(position, resourceId);
+        String transitionName = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            detailFragment.setSharedElementEnterTransition(sharedElementTransition);
+            detailFragment.setSharedElementReturnTransition(sharedElementTransition);
+            transitionName = sharedView.getTransitionName();
+        }
+
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
+                .addSharedElement(sharedView, transitionName)
                 .replace(R.id.fragment_container, detailFragment)
                 .addToBackStack(null)
                 .commit();

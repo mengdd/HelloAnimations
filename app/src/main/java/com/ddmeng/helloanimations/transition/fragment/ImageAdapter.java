@@ -33,6 +33,6 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageViewHolder> {
     }
 
     public interface ImageItemClickListener {
-        void onImageItemClicked(int position, int resourceId);
+        void onImageItemClicked(int position, int resourceId, View sharedView);
     }
 }
