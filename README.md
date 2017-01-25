@@ -10,9 +10,9 @@ Property Animation相关的类:
 - [AnimatorSet](https://developer.android.com/reference/android/animation/AnimatorSet.html)
 
 对应的xml中元素:
-- ValueAnimator -> <animator>
-- ObjectAnimator -> <objectAnimator>
-- AnimatorSet -> <set>
+- `ValueAnimator` -> `<animator>`
+- `ObjectAnimator` -> `<objectAnimator>`
+- `AnimatorSet` -> `<set>`
 
 Property Animation相关的类都处在包`android.animation`中, 除了用到的Interpolater都在`android.view.animation`包中.
 Property Animation的xml文件在`res/animator`文件夹中.
@@ -70,11 +70,11 @@ View Animation相关的xml文件在`res/anim`文件夹中.
 - [AnimationSet](https://developer.android.com/reference/android/view/animation/AnimationSet.html)
 
 对应的xml中元素:
-- AlphaAnimation -> <alpha>
-- RotateAnimation -> <rotate>
-- ScaleAnimation -> <scale>
-- TranslateAnimation -> <translate>
-- AnimationSet -> <set>
+- `AlphaAnimation` -> `<alpha>`
+- `RotateAnimation` -> `<rotate>`
+- `ScaleAnimation` -> `<scale>`
+- `TranslateAnimation` -> `<translate>`
+- `AnimationSet` -> `<set>`
 
 
 View Animation有一个缺点就是当View被移动到另一个位置以后, 其真实的位置仍在原来的位置.
