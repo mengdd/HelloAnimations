@@ -32,8 +32,8 @@ public class SimpleFragmentTransitionDemoActivity extends AppCompatActivity {
                 .setCustomAnimations(
                         R.anim.push_left_in,
                         R.anim.push_left_out,
-                        R.anim.push_left_in,
-                        R.anim.push_left_out)
+                        R.anim.push_right_in,
+                        R.anim.push_right_out)
                 .add(R.id.container, mTextFragmentOne)
                 .addToBackStack(null)
                 .commit();
